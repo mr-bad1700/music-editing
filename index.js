@@ -14,7 +14,7 @@ client.commands = new Collection();
 client.queue = new Map()
 
 client.config = {
-  prefix: "-",
+  prefix: ".",
   SOUNDCLOUD: "dmDh7QSlmGpzH9qQoH1YExYCGcyYeYYC"
 }
 
