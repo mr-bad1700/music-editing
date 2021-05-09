@@ -22,10 +22,10 @@ module.exports = {
         }
 
         const Embed = new MessageEmbed()
-            .setAuthor("Leave Voice Channel", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
-            .setColor("GREEN")
+            .setAuthor("Leave Voice Channel", client.user.avatarURL())
+            .setColor("#303135")
             .setTitle("Success")
-            .setDescription("🎶 Left The Voice Channel.")
+            .setDescription("> 🎶 Left The Voice Channel.")
             .setTimestamp();
 
         return message.channel.send(Embed).catch(() => message.channel.send("🎶 Left The Voice Channel :C"));
