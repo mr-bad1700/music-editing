@@ -22,7 +22,7 @@ module.exports = {
         }
 
         const Embed = new MessageEmbed()
-            .setAuthor("Leave Voice Channel", client.user.avatarURL())
+            .setAuthor("Leave Voice Channel", `client.user.avatarURL()`)
             .setColor("#303135")
             .setTitle("Success")
             .setDescription("> 🎶 Left The Voice Channel.")
