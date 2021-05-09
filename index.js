@@ -39,4 +39,4 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.login(process.env.TOKEN);
+client.login("ODIwODczNjgxOTQxMTY4MTU4.YE7gMA.JO1XGG_ZFJsvO66FDW1mPL7W8OU");
