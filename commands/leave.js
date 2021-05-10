@@ -22,10 +22,9 @@ module.exports = {
         }
 
         const Embed = new MessageEmbed()
-            .setAuthor("Leave Voice Channel", "https://cdn.discordapp.com/attachments/769678873197281300/841424695467049000/image0.png")
+            .setAuthor(client.user.username, client.user.avatarURL())
             .setColor("#303135")
             .setTitle("Success")
-            .setTitleURL("https://discord.gg/26pM9JYU56")
             .setDescription("> 🎶 Left The Voice Channel.")
             .setTimestamp();
 
