@@ -39,4 +39,4 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.login("ODIwODczNjgxOTQxMTY4MTU4.YE7gMA.iKFIvWAX1mB8Xs4N6l4SP_WbLmE");
+client.login("ODI4MzMxNjY3MDEzMTA3NzIy.YGoB-w.Zo6cIFB_suucFL3TX6GiJcLxgC4");
