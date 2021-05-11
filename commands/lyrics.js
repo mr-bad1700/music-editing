@@ -26,9 +26,9 @@ module.exports = {
         const splittedLyrics = splitlyrics.chunk(lyrics, 1024);
 
         let lyricsEmbed = new MessageEmbed()
-            .setAuthor(`${queue.songs[0].title} — Lyrics`, "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+            .setAuthor(client.user.username, client.user.avatarURL())
             .setThumbnail(queue.songs[0].img)
-            .setColor("YELLOW")
+            .setColor("#303135")
             .setDescription(splittedLyrics[0])
             .setFooter(``)
             .setTimestamp();
