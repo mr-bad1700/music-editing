@@ -31,9 +31,9 @@ module.exports = {
             if (searched[0] == undefined) return sendError("Looks like i was unable to find the song on YouTube", message.channel);
             let index = 0;
             let embedPlay = new MessageEmbed()
-                .setColor("BLUE")
-                .setAuthor(`Results for \"${args.join(" ")}\"`, message.author.displayAvatarURL())
-                .setDescription(`${searched.map((video2) => `**\`${++index}\`  |** [\`${video2.title}\`](${video2.url}) - \`${video2.durationFormatted}\``).join("\n")}`)
+                .setColor("#303135")
+                .setAuthor(client.user.username, client.user.avatarURL())
+                .setDescription(`> ${searched.map((video2) => `**\`${++index}\`  |** [\`${video2.title}\`](${video2.url}) - \`${video2.durationFormatted}\``).join("\n")}`)
                 .setFooter("Type the number of the song to add it to the playlist");
             // eslint-disable-next-line max-depth
             message.channel.send(embedPlay).then((m) =>
@@ -51,8 +51,8 @@ module.exports = {
                 console.error(err);
                 return message.channel.send({
                     embed: {
-                        color: "RED",
-                        description: "Nothing has been selected within 20 seconds, the request has been canceled.",
+                        color: "#303135",
+                        description: "> Nothing has been selected within 20 seconds, the request has been canceled.",
                     },
                 });
             }
@@ -62,8 +62,8 @@ module.exports = {
             console.error(err);
             return message.channel.send({
                 embed: {
-                    color: "RED",
-                    description: "🆘  **|**  I could not obtain any search results",
+                    color: "#303135",
+                    description: "> 🆘  **|**  I could not obtain any search results",
                 },
             });
         }
@@ -85,9 +85,9 @@ module.exports = {
         if (serverQueue) {
             serverQueue.songs.push(song);
             let thing = new MessageEmbed()
-                .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+                .setAuthor(client.user.username, client.user.avatarURL())
                 .setThumbnail(song.img)
-                .setColor("YELLOW")
+                .setColor("#303135")
                 .addField("Name", song.title, true)
                 .addField("Duration", song.duration, true)
                 .addField("Requested by", song.req.tag, true)
@@ -163,9 +163,9 @@ module.exports = {
 
             dispatcher.setVolumeLogarithmic(queue.volume / 100);
             let thing = new MessageEmbed()
-                .setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+                .setAuthor(client.user.username, client.user.avatarURL())
                 .setThumbnail(song.img)
-                .setColor("BLUE")
+                .setColor("#303135")
                 .addField("Name", song.title, true)
                 .addField("Duration", song.duration, true)
                 .addField("Requested by", song.req.tag, true)
