@@ -35,8 +35,8 @@ module.exports = {
                 }
                 return message.channel.send({
                     embed: {
-                        color: "GREEN",
-                        description: `✅  **|**  Playlist: **\`${videos[0].title}\`** has been added to the queue`,
+                        color: "#303135",
+                        description: `> ✅  **|**  Playlist: **\`${videos[0].title}\`** has been added to the queue`,
                     },
                 });
             } catch (error) {
@@ -57,10 +57,10 @@ module.exports = {
                     await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
                 }
                 let thing = new MessageEmbed()
-                    .setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+                    .setAuthor(client.user.username, client.user.avatarURL())
                     .setThumbnail(songInfo.thumbnail)
-                    .setColor("GREEN")
-                    .setDescription(`✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`);
+                    .setColor("#303135")
+                    .setDescription(`> ✅  **|**  Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`);
                 return message.channel.send(thing);
             } catch (error) {
                 return sendError("An unexpected error has occurred", message.channel).catch(console.error);
@@ -105,9 +105,9 @@ module.exports = {
                 serverQueue.songs.push(song);
                 if (playlist) return;
                 let thing = new MessageEmbed()
-                    .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+                    .setAuthor(client.user.username, client.user.avatarURL())
                     .setThumbnail(song.img)
-                    .setColor("YELLOW")
+                    .setColor("#303135")
                     .addField("Name", song.title, true)
                     .addField("Duration", song.duration, true)
                     .addField("Requested by", song.req.tag, true)
@@ -170,9 +170,9 @@ module.exports = {
 
             dispatcher.setVolume(serverQueue.volume / 100);
             let thing = new MessageEmbed()
-                .setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+                .setAuthor(client.user.username, client.user.avatarURL())
                 .setThumbnail(song.img)
-                .setColor("BLUE")
+                .setColor("#303135")
                 .addField("Name", song.title, true)
                 .addField("Duration", song.duration, true)
                 .addField("Requested by", song.req.tag, true)
