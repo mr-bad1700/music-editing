@@ -30,7 +30,7 @@ module.exports = {
             if(!command)return message.channel.send("Unknown Command")
             let commandinfo = new MessageEmbed()
             .setTitle("Command: "+command.info.name+" info")
-            .setColor("#35383E")
+            .setColor("#303135")
             .setDescription(`
 Name: ${command.info.name}
 Description: ${command.info.description}
