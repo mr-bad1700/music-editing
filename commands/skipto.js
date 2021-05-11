@@ -13,8 +13,8 @@ module.exports = {
     if (!args.length || isNaN(args[0]))
       return message.channel.send({
                         embed: {
-                            color: "GREEN",
-                            description: `**Usage**: \`${client.config.prefix}skipto <number>\``
+                            color: "#303135",
+                            description: `> **Usage**: \`${client.config.prefix}skipto <number>\``
                         }
    
                    }).catch(console.error);
@@ -44,8 +44,8 @@ module.exports = {
     
     queue.textChannel.send({
                         embed: {
-                            color: "GREEN",
-                            description: `${message.author} ⏭ skipped \`${args[0] - 1}\` songs`
+                            color: "#303135",
+                            description: `> ${message.author} ⏭ skipped \`${args[0] - 1}\` songs`
                         }
    
                    }).catch(console.error);
