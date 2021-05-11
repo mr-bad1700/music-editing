@@ -20,8 +20,8 @@ module.exports = {
         return sendError(`:notes: The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }	    
       let xd = new MessageEmbed()
-      .setDescription("⏸ Paused the music for you!")
-      .setColor("YELLOW")
+      .setDescription("> ⏸ Paused the music for you!")
+      .setColor("#303135")
       .setTitle("Music has been paused!")
       return message.channel.send(xd);
     }
