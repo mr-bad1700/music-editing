@@ -21,9 +21,9 @@ module.exports = {
         const chunked = util.chunk(que, 10).map((x) => x.join("\n"));
 
         const embed = new MessageEmbed()
-            .setAuthor("Server Songs Queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+            .setAuthor(client.user.username, client.user.avatarURL())
             .setThumbnail(message.guild.iconURL())
-            .setColor("BLUE")
+            .setColor("#303135")
             .setDescription(chunked[0])
             .addField("Now Playing", `[${queue.songs[0].title}](${queue.songs[0].url})`, true)
             .addField("Text Channel", queue.textChannel, true)
